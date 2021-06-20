@@ -42,8 +42,7 @@ np.random.seed(233)
 
 train = pd.read_csv('indonesian-news-title.csv')
 
-train = train.drop_duplicates(
-    subset=['title'], keep=False).reset_index(drop=True)
+train = train.drop_duplicates(subset=['title'], keep=False).reset_index(drop=True)
 train = train.loc[:, ['title', 'category']]
 
 """# Cleaning Dataset"""
